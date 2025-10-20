@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Factor Investing with Machine Learning</title>
+  <meta name="description" content="Compare OLS, Random Forest, and Neural Network models using factor signals to predict next-month IC and construct quantile portfolios." />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body {font-family: Inter, Arial, sans-serif; margin:0; background:#fff; color:#222; line-height:1.6}
+    .container {max-width:900px; margin:0 auto; padding:40px 20px}
+    .card {background:#f9f9f9; border:1px solid #e0e0e0; border-radius:12px; padding:24px; margin:20px 0}
+    .btn {display:inline-block; padding:10px 18px; background:#1976d2; color:#fff; border-radius:8px; text-decoration:none}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header style="text-align:center; margin-bottom:32px;">
+      <h1>Factor Investing with Machine Learning</h1>
+      <p class="lead">A brief English summary of this project. The full report (in Mandarin) is available below.</p>
+      <a class="btn" href="ML_Factors.pdf" download>📄 Download Full Report (PDF)</a>
+    </header>
+
+    <section class="card">
+      <h2>Abstract</h2>
+      <p>
+        Factor investing has grown with advances in machine learning and the availability of rich market data.
+        Human decisions are prone to bias, while algorithmic analysis can uncover relationships that are not easily visible and improve portfolio construction.
+        This project applies three machine learning models: OLS, Random Forest, and Neural Networks with varying layers, to predict next-month Information Coefficients (IC), including both Rank IC (RIC) and Normal IC (NIC), using factor signals such as Size, Book-to-Market, and Momentum.
+        The predicted ICs are used to form long–short portfolios across multiple quantile partitions.
+        Across quantiles, portfolios constructed from Random Forest predicted NIC consistently outperform the market, achieving higher win rates and stronger cumulative returns, especially at finer partitions (450 to 900 buckets).
+        Overall, Random Forest with the three factors is the most reliable method for improving portfolio performance and stability among the tested models.
+      </p>
+    </section>
+
+    <footer style="text-align:center; margin-top:40px;">
+      <p>© 2025 Brian Chen • <a href="ML_Factors.pdf">PDF</a></p>
+    </footer>
+  </div>
+</body>
+</html>
