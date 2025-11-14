@@ -34,6 +34,32 @@
       </p>
     </section>
 
+    <section class="card">
+  <h2>Methodology & Workflow</h2>
+  <p>
+    The workflow of this project follows a structured pipeline that links data extraction, 
+    machine learning prediction, and portfolio construction. Monthly TEJ data are first 
+    cleaned and transformed to compute the Size, Book-to-Market, and Momentum factors. 
+    Using these factor signals, three machine learning models—OLS, Random Forests, and 
+    Neural Networks—are trained to generate one-month-ahead predictions of Information 
+    Coefficients (ICs), including both Rank IC (RIC) and Normal IC (NIC).
+  </p>
+
+  <p>
+    Based on the predicted IC sign, stocks are sorted by their factor values and allocated 
+    into multiple quantile partitions (e.g., 10, 20, 50, 100, 200, 300, 450, and 900 buckets). 
+    When the predicted IC is positive, the strategy takes long positions in the highest 
+    quantile and short positions in the lowest quantile. When the IC is negative, the 
+    long–short positions are reversed. This framework allows us to evaluate how different 
+    machine learning models enhance predictive accuracy and improve portfolio performance 
+    across increasingly fine quantile structures.
+  </p>
+
+  <div style="text-align:center; margin-top:24px;">
+    <img src="Architecture.png" alt="Workflow Diagram" style="max-width:100%; border-radius:12px;">
+  </div>
+</section>
+
     <footer style="text-align:center; margin-top:40px;">
       <p>© 2025 Brian Chen • <a href="IC_ML.pdf">PDF</a></p>
     </footer>
