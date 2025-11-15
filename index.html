@@ -191,6 +191,87 @@
   </ul>
 
 </section>
+<section class="card">
+  <h2>Results</h2>
+  <p>
+    We summarize three main findings from the IC-based long–short strategies built on
+    Size, B/M, and Mom factors:
+  </p>
+  <ol>
+    <li>
+      Across all three models, portfolios constructed using predicted Rank IC (RIC) 
+      do not generate strong cumulative performance. Strategies based on Normal IC (NIC) 
+      consistently outperform those based on RIC.
+    </li>
+    <li>
+      When using NIC, Random Forest (RF) and Artificial Neural Networks (ANN) clearly
+      outperform OLS in both cumulative returns and win rates, highlighting the ability 
+      of machine learning models to capture non-linear relationships between factors 
+      and future returns.
+    </li>
+    <li>
+      For RF- and ANN-based NIC strategies, we observe a clear pattern: the finer the 
+      quantile partition (e.g., from 10 to 900 buckets), the higher the cumulative 
+      return of the long–short portfolios.
+    </li>
+  </ol>
+  <p>
+    Overall, the RF–NIC strategy is the best-performing approach in our IC-based 
+    long–short framework, delivering the highest cumulative returns together with
+    a win rate exceeding 60%.
+  </p>
+
+  <!-- Cumulative return charts -->
+  <div style="margin-top:24px; text-align:center;">
+    <h3 style="margin-bottom:16px;">Cumulative Returns of IC-Based Long–Short Portfolios</h3>
+    <div style="display:flex; flex-wrap:wrap; gap:16px; justify-content:center;">
+
+      <!-- ANN -->
+      <div style="flex:1 1 280px; max-width:520px;">
+        <img src="ANN_RIC.jpg" alt="ANN RIC cumulative return" style="width:100%; border-radius:12px;">
+        <p style="font-size:0.9rem; margin-top:8px;">ANN — RIC-based portfolios</p>
+      </div>
+
+      <div style="flex:1 1 280px; max-width:520px;">
+        <img src="ANN_NIC.jpg" alt="ANN NIC cumulative return" style="width:100%; border-radius:12px;">
+        <p style="font-size:0.9rem; margin-top:8px;">ANN — NIC-based portfolios</p>
+      </div>
+
+      <!-- RF -->
+      <div style="flex:1 1 280px; max-width:520px;">
+        <img src="RF_RIC.jpg" alt="RF RIC cumulative return" style="width:100%; border-radius:12px;">
+        <p style="font-size:0.9rem; margin-top:8px;">Random Forest — RIC-based portfolios</p>
+      </div>
+
+      <div style="flex:1 1 280px; max-width:520px;">
+        <img src="RF_NIC.jpg" alt="RF NIC cumulative return" style="width:100%; border-radius:12px;">
+        <p style="font-size:0.9rem; margin-top:8px;">Random Forest — NIC-based portfolios</p>
+      </div>
+
+      <!-- OLS -->
+      <div style="flex:1 1 280px; max-width:520px;">
+        <img src="OLS_RIC.jpg" alt="OLS RIC cumulative return" style="width:100%; border-radius:12px;">
+        <p style="font-size:0.9rem; margin-top:8px;">OLS — RIC-based portfolios</p>
+      </div>
+
+      <div style="flex:1 1 280px; max-width:520px;">
+        <img src="OLS_NIC.jpg" alt="OLS NIC cumulative return" style="width:100%; border-radius:12px;">
+        <p style="font-size:0.9rem; margin-top:8px;">OLS — NIC-based portfolios</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Win-rate chart -->
+  <div style="margin-top:32px; text-align:center;">
+    <h3 style="margin-bottom:16px;">Win Rates Across Quantile Portfolios</h3>
+    <img src="win_rate.png" alt="Win rates of IC-based strategies" style="max-width:100%; border-radius:12px;">
+    <p style="font-size:0.9rem; margin-top:8px;">
+      RF–NIC achieves both the highest cumulative return and a win rate above 60%, 
+      confirming it as the most effective model in our IC-based long–short setting.
+    </p>
+  </div>
+</section>
 
     <footer style="text-align:center; margin-top:40px;">
       <p>© 2025 Brian Chen • <a href="IC_ML.pdf">PDF</a></p>
