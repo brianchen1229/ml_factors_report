@@ -105,6 +105,93 @@
     </p>
   </section>
 
+  <section class="card">
+  <h2>Factor Definitions & Empirical Effects</h2>
+  <p>
+    This project examines three classic cross-sectional equity factors—Size, 
+    Book-to-Market (B/M), and Momentum (Mom)—which are widely used in asset pricing, 
+    factor investing, and machine-learning–based return prediction. Below we provide 
+    the definitions, mathematical formulations, and key empirical findings supporting 
+    each factor.
+  </p>
+
+  <!-- Size -->
+  <h3 style="margin-top:20px;">1. Size (Market Capitalization)</h3>
+  <p>
+    Size represents the total market capitalization of a firm and reflects its 
+    market position, visibility, and future prospects. Larger firms tend to be more 
+    stable, while smaller firms often exhibit higher risk and potentially higher returns.
+  </p>
+
+  <p style="text-align:center;">
+    \[
+      \text{Size}_{t} = \log(\text{MarketCap}_{t})
+    \]
+  </p>
+
+  <p>
+    where MarketCap = price × shares outstanding. The log transformation is used 
+    because market value tends to be large and skewed.
+  </p>
+
+  <h4>Small-Firm Effect</h4>
+  <ul>
+    <li>Small-firm effect refers to the tendency for small-cap stocks to earn higher returns than large-cap stocks.</li>
+    <li>Banz (1981): documented that return decreases as firm size increases.</li>
+    <li>Reinganum (1981): showed that the smallest firms earn returns higher than CAPM predictions, with the effect concentrated in January.</li>
+  </ul>
+
+  <!-- Book-to-Market -->
+  <h3 style="margin-top:24px;">2. Book-to-Market (B/M)</h3>
+  <p>
+    The Book-to-Market ratio compares a firm’s accounting value (book equity) with 
+    its market value, and is often used to identify undervalued (value) versus 
+    highly priced (growth) firms.
+  </p>
+
+  <p style="text-align:center;">
+    \[
+      \text{B/M}_{t} = 
+      \frac{\text{Book Equity}_{t}}{\text{MarketCap}_{t}}
+    \]
+  </p>
+
+  <h4>Value Effect</h4>
+  <ul>
+    <li>Firms with high B/M (value stocks) tend to earn higher returns than low B/M firms (growth stocks).</li>
+    <li>Fama and French (1992): demonstrated that high-B/M portfolios significantly outperform low-B/M portfolios across NYSE, AMEX, and NASDAQ.</li>
+    <li>Empirical results show the value premium can reach ~1.5% per month in some periods.</li>
+  </ul>
+
+  <!-- Momentum -->
+  <h3 style="margin-top:24px;">3. Momentum (Mom)</h3>
+  <p>
+    Momentum measures the tendency of assets that have performed well (poorly) in 
+    the past to continue performing well (poorly) in the near future.
+  </p>
+
+  <p style="text-align:center;">
+    \[
+      \text{Mom}_{t} 
+      = 
+      \ln\!\left(\frac{S_{t-1}}{S_{t-12}}\right)
+    \]
+  </p>
+
+  <p>
+    where the factor uses the cumulative 12-month return from month \(t-12\) to 
+    \(t-1\). Using log return removes scale effects and avoids dependency on the base period.
+  </p>
+
+  <h4>Momentum Effect</h4>
+  <ul>
+    <li>Stocks with strong past performance tend to continue outperforming weaker stocks.</li>
+    <li>Jegadeesh & Titman (1993): showed that 6–12 month winners outperform losers by around 1% per month.</li>
+    <li>Momentum is one of the strongest and most persistent anomalies in financial markets worldwide.</li>
+  </ul>
+
+</section>
+
     <footer style="text-align:center; margin-top:40px;">
       <p>© 2025 Brian Chen • <a href="IC_ML.pdf">PDF</a></p>
     </footer>
