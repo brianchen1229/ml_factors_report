@@ -60,6 +60,51 @@
   </div>
 </section>
 
+  <!-- New card: Rank IC & Normal IC -->
+  <section class="card">
+    <h2>Rank IC and Normal IC</h2>
+    <p>
+      Information Coefficients (ICs) measure how well a factor predicts future returns. 
+      In this project, we use two types of ICs: Rank IC (RIC) and Normal IC (NIC).
+    </p>
+
+    <h3 style="margin-top:16px;">Rank IC (RIC)</h3>
+    <p>
+      Rank IC first converts raw factor values into cross-sectional ranks within each month, 
+      and then computes the correlation between these ranks and the realized returns in the 
+      next month. Let \(X_t = (X_{1t}, \ldots, X_{Nt})\) be the factor values at month \(t\), 
+      and \(R_{t+1} = (R_{1,t+1}, \ldots, R_{N,t+1})\) be the one-month-ahead returns. 
+      The Rank IC at month \(t\) is
+    </p>
+    <p style="text-align:center;">
+      \[
+        \mathrm{RIC}_t = \mathrm{Corr}\big( \operatorname{rank}(X_t),\, R_{t+1} \big).
+      \]
+    </p>
+    <p>
+      Because it uses ranks instead of raw values, Rank IC is less sensitive to outliers 
+      and monotonic transformations of the factor, making it a robust measure of the 
+      cross-sectional ordering power of the factor.
+    </p>
+
+    <h3 style="margin-top:16px;">Normal IC (NIC)</h3>
+    <p>
+      Normal IC directly computes the Pearson correlation between the raw factor values 
+      and the next-month returns. Using the same notation, the Normal IC at month \(t\) is
+    </p>
+    <p style="text-align:center;">
+      \[
+        \mathrm{NIC}_t = \mathrm{Corr}\big( X_t,\, R_{t+1} \big).
+      \]
+    </p>
+    <p>
+      Normal IC is more sensitive to the magnitude of factor values and extreme observations, 
+      but it captures linear relationships between the factor and future returns. 
+      In this study, both RIC and NIC are predicted by machine learning models and 
+      then used to guide long–short portfolio construction.
+    </p>
+  </section>
+
     <footer style="text-align:center; margin-top:40px;">
       <p>© 2025 Brian Chen • <a href="IC_ML.pdf">PDF</a></p>
     </footer>
